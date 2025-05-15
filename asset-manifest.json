@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ajatt_gang_youtube_subs/static/css/main.88854a83.css",
+    "main.js": "/ajatt_gang_youtube_subs/static/js/main.fd90758c.js",
+    "static/js/453.b42747df.chunk.js": "/ajatt_gang_youtube_subs/static/js/453.b42747df.chunk.js",
+    "index.html": "/ajatt_gang_youtube_subs/index.html",
+    "main.88854a83.css.map": "/ajatt_gang_youtube_subs/static/css/main.88854a83.css.map",
+    "main.fd90758c.js.map": "/ajatt_gang_youtube_subs/static/js/main.fd90758c.js.map",
+    "453.b42747df.chunk.js.map": "/ajatt_gang_youtube_subs/static/js/453.b42747df.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.88854a83.css",
+    "static/js/main.fd90758c.js"
+  ]
+}
