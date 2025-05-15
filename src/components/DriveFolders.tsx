@@ -48,45 +48,51 @@ export const DriveFolders = () => {
   }, []);
 
   return (
-    <div>
-      <h2>AJATT Gang Subs</h2>
+    <div className="container py-4">
+      <h2 className="text-info mb-4">AJATT Gang Subs</h2>
+
       {folderContents.map((folder: any) => (
-        <div key={folder.id} style={{ marginBottom: '1.5rem' }}>
-          <h3>{folder.name}</h3>
-          <ul>
+        <div key={folder.id} className="mb-5">
+          <h4 className="text-start text-light mb-3"><span style={{ color: '#786c6c'}}>channel:</span> {folder.name}</h4>
+
+          <div className="list-group">
             {folder.files.map((file: any) => {
-              const videoId = file.name.split('_')[0];
-              const thumb = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+              const videoId = file.name.split('__')[0];
+              const thumb = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+              const title = file.name.split('__')[1].replace(/\.srt$/, '');
 
-
-              const title = file.name.split('_')[1].replace(/\.srt$/, '');
               return (
-                <>
-
-                  <img
-                    src={thumb}
-                    alt={file.name}
-                    width={160}
-                    height="auto"
-                    style={{display: 'block', marginBottom: '0.5rem'}}
-                  />
-                  <li key={file.id}>
-                    <div>{title}</div>
+                <div key={file.id}
+                     className="list-group-item bg-dark text-light d-flex align-items-center justify-content-between">
+                  <div>
+                    <img
+                      src={thumb}
+                      alt={file.name}
+                      className="img-thumbnail me-4"
+                      style={{width: '160px', height: 'auto'}}
+                    />
+                  </div>
+                  <div className="d-flex flex-column flex-grow-1 me-3">
+                    <h6 className="text-start mb-2">{title}</h6>
                     <a
+                      style={{ width: '100px'}}
                       href={`https://drive.google.com/file/d/${file.id}/view`}
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="btn btn-sm btn-outline-info"
                     >
-                      download
+                      Download
                     </a>
-                  </li>
-                </>
+                  </div>
 
-              )
+
+                </div>
+              );
             })}
-          </ul>
+          </div>
         </div>
       ))}
     </div>
+
   );
 };
