@@ -64,15 +64,15 @@ export const DriveFolders = () => {
               return (
                 <div key={file.id}
                      className="list-group-item bg-dark text-light d-flex align-items-center justify-content-between">
-                  <div>
+                  <div className="me-2">
                     <img
                       src={thumb}
                       alt={file.name}
-                      className="img-thumbnail me-4"
+                      className="img-thumbnail"
                       style={{width: '160px', height: 'auto'}}
                     />
                   </div>
-                  <div className="d-flex flex-column flex-grow-1 me-3">
+                  <div className="d-flex flex-column flex-grow-1">
                     <h6 className="text-start mb-2">{title}</h6>
                     <a
                       style={{ width: '100px'}}
