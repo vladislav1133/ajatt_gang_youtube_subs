@@ -1,7 +1,5 @@
 {
   "homepage": "https://vladislav1133.github.io/ajatt_gang_youtube_subs",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build",
   "name": "ajatt_gang_youtube_subs",
   "version": "0.1.0",
   "private": true,
@@ -26,7 +24,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
